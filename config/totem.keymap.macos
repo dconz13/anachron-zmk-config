@@ -19,19 +19,17 @@
 #define FUN 4
 #define UTIL 5
 
-#define S_UNDO &kp LC(Z)
-#define S_CUT &kp LC(X)
-#define S_COPY &kp LC(C)
-#define S_PASTE &kp LC(V)
-#define S_REDO &kp LS(LC(Z))
+#define S_UNDO &kp LG(Z)
+#define S_CUT &kp LG(X)
+#define S_COPY &kp LG(C)
+#define S_PASTE &kp LG(V)
+#define S_REDO &kp LS(LG(Z))
 
 // navigation bindings for back/forward and prev tab/next tab
 //#define BACK &kp LG(LBKT)
 //#define FWD &kp LG(RBKT)
-//#define PTAB &kp LS(LG(LBKT))
-//#define NTAB &kp LS(LG(RBKT))
-#define PTAB &kp LS(LC(TAB))
-#define NTAB &kp LC(TAB)
+#define PTAB &kp LS(LG(LBKT))
+#define NTAB &kp LS(LG(RBKT))
 
 // hyper and meh keys
 #define HYP LS(LC(LA(LGUI)))
@@ -95,7 +93,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS, hold-while-undecided;)  // right-hand HRM
         default_layer { // ColemakDHm
             bindings = <
             &kp Q        &kp W        &kp F           &kp P           &kp B              &kp J         &kp L             &kp U           &kp Y         &kp APOS 
-            &lt LCTL A   &lt LALT R   &lt LGUI S      &lt LSFT T      &kp G              &kp M         &lt RSFT N        &lt RGUI E      &lt LALT I    &lt RCTL O
+            &hml LCTL A  &hml LALT R  &hml LGUI S     &hml LSFT T     &kp G              &kp M         &hmr RSFT N       &hmr RGUI E     &hmr LALT I   &hmr RCTL O
     PTAB    &kp Z        &kp X        &kp C           &kp D           &kp V              &kp K         &kp H             &kp COMMA       &kp DOT       &kp FSLH        NTAB
                                       &lt UTIL ESC    &lt NAV SPACE   &kp TAB            &lt SYM RET   &lt NUM BSPC      &lt FUN DEL
             >;
